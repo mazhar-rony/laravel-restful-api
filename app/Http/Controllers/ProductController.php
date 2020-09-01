@@ -22,7 +22,9 @@ class ProductController extends Controller
 
         // return new ProductCollection(Product::all()); // transform only one single Product
 
-        return ProductCollection::collection(Product::all());
+        //return ProductCollection::collection(Product::all());
+
+        return ProductCollection::collection(Product::paginate(20));
     }
 
     /**
